@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver:localhost;DatabaseName=PD
+    data-username: sa
+    data-password: myserser
