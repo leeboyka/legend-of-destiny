@@ -19,3 +19,7 @@
 2020-01-20 21:35:42.542  INFO 19828 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-01-20 21:35:42.542  INFO 19828 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-01-20 21:35:42.548  INFO 19828 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-01-20 22:06:06.649  INFO 19828 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-20 22:06:06.651  INFO 19828 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-01-20 22:06:06.652  INFO 19828 --- [SpringContextShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-01-20 22:06:06.653  INFO 19828 --- [SpringContextShutdownHook] io.undertow                              : stopping server: Undertow - 2.0.28.Final
