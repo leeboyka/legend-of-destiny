@@ -65,3 +65,31 @@
 2020-03-03 19:47:09.695  INFO 27112 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-03-03 19:47:09.695  INFO 27112 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2020-03-03 19:47:09.695  INFO 27112 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-03-03 20:58:15.310  INFO 15884 --- [main] com.destiny.lodservice.ApplicationTests  : Starting ApplicationTests on DESKTOP-3KD0DF8 with PID 15884 (started by lee in D:\MyProject\Legend of destiny\program\lod-service\all)
+2020-03-03 20:58:15.310  INFO 15884 --- [main] com.destiny.lodservice.ApplicationTests  : The following profiles are active: dev
+2020-03-03 20:58:16.122  INFO 15884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-03 20:58:16.247  INFO 15884 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-03 20:58:16.388  INFO 15884 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-03 20:58:16.872  INFO 15884 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-03 20:58:17.090  INFO 15884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-03 20:58:17.325  INFO 15884 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-03 20:58:17.340  INFO 15884 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-03 20:58:17.372  INFO 15884 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-03 20:58:17.434  INFO 15884 --- [main] com.destiny.lodservice.ApplicationTests  : Started ApplicationTests in 2.373 seconds (JVM running for 3.015)
+2020-03-03 20:58:17.575  INFO 15884 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-03 20:58:17.590  INFO 15884 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-03-03 20:58:17.590  INFO 15884 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-03-03 21:11:40.116  INFO 2252 --- [main] com.destiny.lodservice.ApplicationTests  : Starting ApplicationTests on DESKTOP-3KD0DF8 with PID 2252 (started by lee in D:\MyProject\Legend of destiny\program\lod-service\all)
+2020-03-03 21:11:40.116  INFO 2252 --- [main] com.destiny.lodservice.ApplicationTests  : The following profiles are active: dev
+2020-03-03 21:11:40.929  INFO 2252 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-03 21:11:41.038  INFO 2252 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-03 21:11:41.179  INFO 2252 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-03 21:11:41.678  INFO 2252 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-03 21:11:41.897  INFO 2252 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-03 21:11:42.131  INFO 2252 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-03 21:11:42.163  INFO 2252 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-03 21:11:42.178  INFO 2252 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-03 21:11:42.241  INFO 2252 --- [main] com.destiny.lodservice.ApplicationTests  : Started ApplicationTests in 2.378 seconds (JVM running for 3.02)
+2020-03-03 21:11:42.397  INFO 2252 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-03 21:11:42.397  INFO 2252 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-03-03 21:11:42.397  INFO 2252 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

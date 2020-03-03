@@ -32274,3 +32274,49 @@ com.microsoft.sqlserver.jdbc.SQLServerException: 用户 '' 登录失败。 Clien
 2020-03-03 19:43:54.754  INFO 24876 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/lod-service]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-03-03 19:43:54.754  INFO 24876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-03-03 19:43:54.759  INFO 24876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-03-03 20:07:41.720  INFO 24876 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-03 20:07:41.722  INFO 24876 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-03-03 20:07:41.725  INFO 24876 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-03-03 20:58:32.126  INFO 33536 --- [main] com.destiny.lodservice.Application       : Starting Application on DESKTOP-3KD0DF8 with PID 33536 (started by lee in D:\MyProject\Legend of destiny\program\lod-service)
+2020-03-03 20:58:32.126  INFO 33536 --- [main] com.destiny.lodservice.Application       : The following profiles are active: dev
+2020-03-03 20:58:33.063  INFO 33536 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-03 20:58:33.266  WARN 33536 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-03-03 20:58:33.297  INFO 33536 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-03-03 20:58:33.297  INFO 33536 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1124 ms
+2020-03-03 20:58:33.422  INFO 33536 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-03 20:58:33.547  INFO 33536 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-03 20:58:33.891  INFO 33536 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-03 20:58:33.985  INFO 33536 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-03 20:58:34.141  INFO 33536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-03 20:58:34.141  INFO 33536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-03 20:58:34.172  INFO 33536 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-03 20:58:34.266  INFO 33536 --- [main] io.undertow                              : starting server: Undertow - 2.0.28.Final
+2020-03-03 20:58:34.266  INFO 33536 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-03-03 20:58:34.281  INFO 33536 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-03-03 20:58:34.360  INFO 33536 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8080 (http) with context path '/lod-service'
+2020-03-03 20:58:34.360  INFO 33536 --- [main] com.destiny.lodservice.Application       : Started Application in 2.62 seconds (JVM running for 3.547)
+2020-03-03 21:12:11.267  INFO 33536 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-03 21:12:11.267  INFO 33536 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-03-03 21:12:11.267  INFO 33536 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-03-03 21:12:11.267  INFO 33536 --- [SpringContextShutdownHook] io.undertow                              : stopping server: Undertow - 2.0.28.Final
+2020-03-03 21:12:14.615  INFO 19932 --- [main] com.destiny.lodservice.Application       : Starting Application on DESKTOP-3KD0DF8 with PID 19932 (started by lee in D:\MyProject\Legend of destiny\program\lod-service)
+2020-03-03 21:12:14.615  INFO 19932 --- [main] com.destiny.lodservice.Application       : The following profiles are active: dev
+2020-03-03 21:12:15.458  INFO 19932 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-03 21:12:15.661  WARN 19932 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-03-03 21:12:15.693  INFO 19932 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-03-03 21:12:15.693  INFO 19932 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1031 ms
+2020-03-03 21:12:15.849  INFO 19932 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-03 21:12:15.974  INFO 19932 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-03 21:12:16.317  INFO 19932 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-03 21:12:16.396  INFO 19932 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-03 21:12:16.552  INFO 19932 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-03 21:12:16.567  INFO 19932 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-03 21:12:16.599  INFO 19932 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-03 21:12:16.677  INFO 19932 --- [main] io.undertow                              : starting server: Undertow - 2.0.28.Final
+2020-03-03 21:12:16.677  INFO 19932 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-03-03 21:12:16.692  INFO 19932 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-03-03 21:12:16.771  INFO 19932 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8080 (http) with context path '/lod-service'
+2020-03-03 21:12:16.771  INFO 19932 --- [main] com.destiny.lodservice.Application       : Started Application in 2.639 seconds (JVM running for 3.198)
+2020-03-03 21:12:30.959  INFO 19932 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-03 21:12:30.959  INFO 19932 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-03 21:12:30.974  INFO 19932 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
