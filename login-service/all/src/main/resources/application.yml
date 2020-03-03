@@ -2,12 +2,6 @@ spring:
   http:
     encoding:
       enabled: true
-  datasource:
-    druid:
-      stat-view-servlet:
-        login-username: druid
-        login-password: leeboyka
-        enabled: true
   jackson:
     locale: zh_CN
     date-format: yyyy-MM-dd HH:mm:ss
