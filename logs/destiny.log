@@ -32320,3 +32320,8 @@ com.microsoft.sqlserver.jdbc.SQLServerException: 用户 '' 登录失败。 Clien
 2020-03-03 21:12:30.959  INFO 19932 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-03-03 21:12:30.959  INFO 19932 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-03-03 21:12:30.974  INFO 19932 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-03-03 21:14:42.847  INFO 19932 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-03 21:14:42.847  INFO 19932 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-03-03 21:14:42.847  INFO 19932 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-03-03 21:14:42.847  INFO 19932 --- [SpringContextShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-03 21:14:42.847  INFO 19932 --- [SpringContextShutdownHook] io.undertow                              : stopping server: Undertow - 2.0.28.Final
