@@ -38,7 +38,7 @@ logging:
           app: debug
     root: info
   file:
-    name: ../logs/destiny.log
+    name: ../../logs/destiny.log
 
 #服务配置
 server:
