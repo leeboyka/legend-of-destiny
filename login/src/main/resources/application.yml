@@ -1,4 +1,51 @@
+spring:
+  http:
+    encoding:
+      enabled: true
+  datasource:
+    druid:
+      stat-view-servlet:
+        login-username: druid
+        login-password: leeboyka
+        enabled: true
+  jackson:
+    locale: zh_CN
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: always
+  cache:
+    type: simple
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 20MB
+
+#引入mybatis
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.**.domin
+  configuration:
+    call-setters-on-nulls: true
+
+#日志配置
+logging:
+  level:
+    com:
+      destiny:
+        internet:
+          app: debug
+    root: info
+  file:
+    name: ../../logs/login.log
+
+#服务配置
 server:
   port: 8081
   servlet:
     context-path: /login-service
+
+#引入swagger
+swagger:
+  enable: true

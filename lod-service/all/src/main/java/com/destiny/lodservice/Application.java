@@ -26,12 +26,6 @@ public class Application extends SpringBootServletInitializer {
         return application.sources(Application.class);
     }
 
-
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-
-
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -45,5 +39,9 @@ public class Application extends SpringBootServletInitializer {
 
         source.registerCorsConfiguration("/**", corsConfiguration);
         return new CorsFilter(source);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
     }
 }
