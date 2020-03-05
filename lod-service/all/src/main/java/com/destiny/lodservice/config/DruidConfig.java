@@ -27,8 +27,8 @@ public class DruidConfig {
         //servletRegistrationBean.addInitParameter("allow", "192.168.1.3"); //白名单
         //servletRegistrationBean.addInitParameter("deny", "192.168.1.3"); //黑名单;与白名单共存时,deny优先于allow
         //登录查看信息的账号和密码
-        servletRegistrationBean.addInitParameter("loginUsername", "leeboyka");
-        servletRegistrationBean.addInitParameter("loginPassword", "lang13572081952");
+        servletRegistrationBean.addInitParameter("loginUsername", "druid");
+        servletRegistrationBean.addInitParameter("loginPassword", "leeboyka");
         //能否重置数据
         servletRegistrationBean.addInitParameter("resetEnable", "false");
         return servletRegistrationBean;
