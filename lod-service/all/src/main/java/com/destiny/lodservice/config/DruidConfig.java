@@ -17,12 +17,12 @@ import org.springframework.context.annotation.Configuration;
 public class DruidConfig {
 
     /**
-     * 注册 Servlet 组件
+     * 注册 Servlet 组件,监控
      */
     @Bean
-    public ServletRegistrationBean statViewServlet() {
+    public ServletRegistrationBean<StatViewServlet> statViewServlet() {
         //servletRegistrationBean提供的类进行注册
-        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
+        ServletRegistrationBean<StatViewServlet> servletRegistrationBean = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
         //添加初始化参数initParams
         //servletRegistrationBean.addInitParameter("allow", "192.168.1.3"); //白名单
         //servletRegistrationBean.addInitParameter("deny", "192.168.1.3"); //黑名单;与白名单共存时,deny优先于allow
@@ -35,11 +35,11 @@ public class DruidConfig {
     }
 
     /**
-     * 注册Filter组件
+     * 注册Filter组件，过滤
      */
     @Bean
-    public FilterRegistrationBean statFilter() {
-        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());
+    public FilterRegistrationBean<WebStatFilter> statFilter() {
+        FilterRegistrationBean<WebStatFilter> filterRegistrationBean = new FilterRegistrationBean<>(new WebStatFilter());
         //添加过滤规则，验证所有请求
         filterRegistrationBean.addUrlPatterns("/*");
         //添加需要忽略的信息格式，对 *.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/* 不进行验证
