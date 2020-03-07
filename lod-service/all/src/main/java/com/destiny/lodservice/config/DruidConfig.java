@@ -8,16 +8,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @ClassName DruidConfig
- * @Description Druid监控配置类
- * @Author lee
- * @Date 2020/3/5 21:43
+ * Druid监控配置类
+ *
+ * @author lee
+ * @date 2020/3/5 21:43
  */
 @Configuration
 public class DruidConfig {
 
     /**
      * 注册 Servlet 组件,监控
+     *
+     * @return ServletRegistrationBean
      */
     @Bean
     public ServletRegistrationBean<StatViewServlet> statViewServlet() {
@@ -36,6 +38,8 @@ public class DruidConfig {
 
     /**
      * 注册Filter组件，过滤
+     *
+     * @return FilterRegistrationBean
      */
     @Bean
     public FilterRegistrationBean<WebStatFilter> statFilter() {
