@@ -30,12 +30,10 @@
     props: {
       msg: String
     },
-    mounted: {
-
-    },
+    mounted: {},
     methods: {
       show: function () {
-        getPersonInfo("2020")
+        getPersonInfo({code: "2020"})
       }
     }
   }
