@@ -1,5 +1,5 @@
 
-import service from './axios'
+import service from '../https/axios'
 
 export const getPersonInfo = params => {
     return service({

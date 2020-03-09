@@ -23,7 +23,7 @@
 
 <script>
 
-  import {getPersonInfo} from '../service/roleapi'
+  import {getPersonInfo} from '../service/api/roleapi'
 
   export default {
     name: 'HelloWorld',
