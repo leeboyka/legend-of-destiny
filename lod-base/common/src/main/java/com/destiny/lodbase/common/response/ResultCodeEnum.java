@@ -12,25 +12,28 @@ import lombok.Getter;
 public enum ResultCodeEnum {
 
     //  响应成功
-    SUCCESS(true, 1000, "成功"),
+    SUCCESS(true, "SUCCESS", "成功"),
 
     //  未知错误
-    UNKNOWN_ERROR(false, 2000, "未知错误"),
+    UNKNOWN_ERROR(false, "UNKNOWN_ERROR", "未知错误"),
 
     //  参数错误
-    PARAM_ERROR(false, 3000, "参数错误"),
+    PARAM_ERROR(false, "PARAM_ERROR", "参数错误"),
 
     //  用户名或密码错误
-    LOGIN_ERROR(false, 4000, "用户名或密码错误"),
+    LOGIN_ERROR(false, "LOGIN_ERROR", "用户名或密码错误"),
 
     //  权限不足
-    ACCESS_ERROR(false, 4001, "权限不足"),
+    ACCESS_ERROR(false, "ACCESS_ERROR", "权限不足"),
 
     //  调用远程失败
-    REMOTE_ERROR(false, 5000, "调用远程失败"),
+    REMOTE_ERROR(false, "REMOTE_ERROR", "调用远程失败"),
+
+    //  数据库异常
+    DATABASE_ERROR(false,"DATABASE_ERROR", "数据库异常"),
 
     //  重复操作
-    REPEAT_ERROR(false, 6000, "重复操作");
+    REPEAT_ERROR(false, "REPEAT_ERROR", "重复操作");
 
 
     /**
@@ -41,7 +44,7 @@ public enum ResultCodeEnum {
     /**
      * 响应状态码
      */
-    private Integer code;
+    private String status;
 
     /**
      * 响应信息
@@ -49,9 +52,9 @@ public enum ResultCodeEnum {
     private String message;
 
 
-    ResultCodeEnum(boolean success, Integer code, String message) {
+    ResultCodeEnum(boolean success, String status, String message) {
         this.success = success;
-        this.code = code;
+        this.status = status;
         this.message = message;
     }
 
