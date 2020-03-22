@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * Druid监控配置类
  *
  * @author leeboyka
- * @date 2020/03/33 00:43
+ * @date 2020/03/23 00:43
  */
 @Configuration
 public class DruidConfig {
