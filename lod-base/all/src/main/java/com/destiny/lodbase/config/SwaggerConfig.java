@@ -48,7 +48,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .enable(enableSwagger)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.destiny.lodbase.common.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.destiny.lodbase.common"))
                 .paths(PathSelectors.any())
                 .build()
                 .groupName("common");
