@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost;DatabaseName=LegendOfDestiny
+    username: sa
+    password: leeboyka
