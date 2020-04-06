@@ -15,7 +15,8 @@
                :unique-opened="$store.getters.uniquerouter"
                :collapse-transition="true"
       >
-        <template v-for="(item,index) in menu">
+        {{$store.getters.routers}}
+        <template v-for="(item,index) in $store.getters.routers">
           <el-submenu :key="index" v-if="!item.alone && item.children.length>0" :index="index+''">
             <template slot="title">
               <i :class="item.iconCls?item.iconCls:[fa,fa-server]"></i>
@@ -41,11 +42,6 @@ import menuTree from './MenuTree'
 
 export default {
   name: 'asideNav',
-  data () {
-    return {
-      menu: []
-    }
-  },
   components: {
     menuTree
   },

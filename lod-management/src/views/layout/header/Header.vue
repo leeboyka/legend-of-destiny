@@ -1,11 +1,11 @@
 <template>
   <div>
     <el-header id="header">
-      <span class="hideAside" @click="collapse"><i class="fa fa-indent fa-lg"></i></span>
+      <span class="hideAside" @click="collapse"><i class="fa fa-indent fa-lg">00</i></span>
       <ul class="personal">
         <li class="fullScreen" @click="fullScreen">
           <el-tooltip class="item" effect="dark" content="全屏" placement="bottom"><i
-            class="fa fa-arrows-alt fa-lg"></i></el-tooltip>
+            class="fa fa-arrows-alt fa-lg">111</i></el-tooltip>
         </li>
         <li>
           <langSelect></langSelect>

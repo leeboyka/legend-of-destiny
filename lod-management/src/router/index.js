@@ -10,7 +10,7 @@ const routeName = en.routeName
 const defaultRouter = [
   {
     path: '/',
-    redirect: '/login',
+    redirect: '/index',
     hidden: true,
     children: []
   },
@@ -47,79 +47,79 @@ const defaultRouter = [
 ]
 
 const addRouter = [
-  // {
-  //   path: '/',
-  //   iconCls: 'el-icon-tickets', // 图标样式class
-  //   name: routeName.article,
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: '/addArticle',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: routeName.publishArticle,
-  //       component: '',
-  //       children: []
-  //     },
-  //     {
-  //       path: '/addArticleEditor',
-  //       iconCls: 'el-icon-edit-outline', // 图标样式class
-  //       name: routeName.publishArticleEditor,
-  //       component: '',
-  //       children: []
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/',
-  //   iconCls: 'fa fa-universal-access', // 图标样式class
-  //   name: routeName.permissions,
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: '/pagePermissions',
-  //       iconCls: 'fa fa-expeditedssl', // 图标样式class
-  //       name: routeName.pageControl,
-  //       component: '',
-  //       children: []
-  //     },
-  //     {
-  //       path: '/btnPermissions',
-  //       iconCls: 'fa fa-toggle-on', // 图标样式class
-  //       name: routeName.btnControl,
-  //       component: '',
-  //       children: []
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/',
-  //   iconCls: 'fa fa-newspaper-o', // 图标样式class
-  //   name: routeName.table,
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: '/dataTable',
-  //       iconCls: 'fa fa-sliders', // 图标样式class
-  //       name: routeName.multiDataTable,
-  //       component: '',
-  //       children: []
-  //     },
-  //     {
-  //       path: '/filterTable',
-  //       iconCls: 'fa fa-sort-amount-asc', // 图标样式class
-  //       name: routeName.filterTable,
-  //       component: '',
-  //       children: []
-  //     },
-  //     {
-  //       path: '/dragTabe',
-  //       iconCls: 'fa fa-hand-stop-o', // 图标样式class
-  //       name: routeName.dragSort,
-  //       component: '',
-  //       children: []
-  //     }
-  //   ]
-  // },
+  {
+    path: '/',
+    iconCls: 'el-icon-tickets', // 图标样式class
+    name: routeName.article,
+    component: Layout,
+    children: [
+      {
+        path: '/addArticle',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: routeName.publishArticle,
+        component: '',
+        children: []
+      },
+      {
+        path: '/addArticleEditor',
+        iconCls: 'el-icon-edit-outline', // 图标样式class
+        name: routeName.publishArticleEditor,
+        component: '',
+        children: []
+      }
+    ]
+  },
+  {
+    path: '/',
+    iconCls: 'fa fa-universal-access', // 图标样式class
+    name: routeName.permissions,
+    component: Layout,
+    children: [
+      {
+        path: '/pagePermissions',
+        iconCls: 'fa fa-expeditedssl', // 图标样式class
+        name: routeName.pageControl,
+        component: '',
+        children: []
+      },
+      {
+        path: '/btnPermissions',
+        iconCls: 'fa fa-toggle-on', // 图标样式class
+        name: routeName.btnControl,
+        component: '',
+        children: []
+      }
+    ]
+  },
+  {
+    path: '/',
+    iconCls: 'fa fa-newspaper-o', // 图标样式class
+    name: routeName.table,
+    component: Layout,
+    children: [
+      {
+        path: '/dataTable',
+        iconCls: 'fa fa-sliders', // 图标样式class
+        name: routeName.multiDataTable,
+        component: '',
+        children: []
+      },
+      {
+        path: '/filterTable',
+        iconCls: 'fa fa-sort-amount-asc', // 图标样式class
+        name: routeName.filterTable,
+        component: '',
+        children: []
+      },
+      {
+        path: '/dragTabe',
+        iconCls: 'fa fa-hand-stop-o', // 图标样式class
+        name: routeName.dragSort,
+        component: '',
+        children: []
+      }
+    ]
+  },
 
   {
     path: '*',
