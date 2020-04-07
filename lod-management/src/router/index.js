@@ -57,14 +57,14 @@ const addRouter = [
         path: '/addArticle',
         iconCls: 'el-icon-edit-outline', // 图标样式class
         name: routeName.publishArticle,
-        component: '',
+        component: Login,
         children: []
       },
       {
         path: '/addArticleEditor',
         iconCls: 'el-icon-edit-outline', // 图标样式class
         name: routeName.publishArticleEditor,
-        component: '',
+        component: Layout,
         children: []
       }
     ]
@@ -79,14 +79,14 @@ const addRouter = [
         path: '/pagePermissions',
         iconCls: 'fa fa-expeditedssl', // 图标样式class
         name: routeName.pageControl,
-        component: '',
+        component: Login,
         children: []
       },
       {
         path: '/btnPermissions',
         iconCls: 'fa fa-toggle-on', // 图标样式class
         name: routeName.btnControl,
-        component: '',
+        component: Login,
         children: []
       }
     ]
@@ -101,26 +101,25 @@ const addRouter = [
         path: '/dataTable',
         iconCls: 'fa fa-sliders', // 图标样式class
         name: routeName.multiDataTable,
-        component: '',
+        component: Login,
         children: []
       },
       {
         path: '/filterTable',
         iconCls: 'fa fa-sort-amount-asc', // 图标样式class
         name: routeName.filterTable,
-        component: '',
+        component: Login,
         children: []
       },
       {
         path: '/dragTabe',
         iconCls: 'fa fa-hand-stop-o', // 图标样式class
         name: routeName.dragSort,
-        component: '',
+        component: Login,
         children: []
       }
     ]
   },
-
   {
     path: '*',
     redirect: '/404',

@@ -25,15 +25,16 @@ const routerData = {
           }
         }
       }
+      debugger
       // 拷贝这个数组是因为做权限测试的时候可以从低级切回到高级角色，仅限演示，正式开发时省略这步直接使用 addRouter
       // 仅限演示
-      const newArr = [...addRouter]
-      eachSelect(newArr, role)
-      commit('setRouters', newArr)
+      // const newArr = [...addRouter]
+      // eachSelect(newArr, role)
+      // commit('setRouters', newArr)
 
       // 正式开发
-      // eachSelect(addRouter, role)
-      // commit('setRouters', addRouter)
+      eachSelect(addRouter, role)
+      commit('setRouters', addRouter)
     }
   }
 }

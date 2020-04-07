@@ -15,9 +15,8 @@
                :unique-opened="$store.getters.uniquerouter"
                :collapse-transition="true"
       >
-        {{$store.getters.routers}}
         <template v-for="(item,index) in $store.getters.routers">
-          <el-submenu :key="index" v-if="!item.alone && item.children.length>0" :index="index+''">
+          <el-submenu v-if="!item.hidden && !item.alone && item.children.length>0" :key="index" :index="index+''">
             <template slot="title">
               <i :class="item.iconCls?item.iconCls:[fa,fa-server]"></i>
               <span slot="title">{{ $t(`routeName.${item.name}`) }}</span>
@@ -26,7 +25,7 @@
             <menu-tree :menuData="item.children"></menu-tree>
 
           </el-submenu>
-          <el-menu-item :key="index" :index="item.path" v-else>
+          <el-menu-item v-else-if="!item.hidden" :key="index" :index="item.path">
             <i :class="item.iconCls?item.iconCls:[fa,fa-file]"></i>
             <span slot="title">{{ $t(`routeName.${item.name}`) }}</span>
           </el-menu-item>
