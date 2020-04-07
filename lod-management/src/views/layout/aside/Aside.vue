@@ -2,6 +2,7 @@
   <div>
     <el-aside id="asideNav">
       <div class="logo-name">
+        <div><img height="200px" src="../../../assets/logo.png"/></div>
         <p v-if="$store.getters.logoShow">XU</p>
         <p v-else>vue-xuAdmin后台模板</p>
       </div>

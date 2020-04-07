@@ -1,29 +1,28 @@
 <template>
   <div>
     <el-header id="header">
-      <span class="hideAside" @click="collapse"><i class="fa fa-indent fa-lg">00</i></span>
+      <span class="hideAside" @click="collapse"><i class="el-icon-s-fold"></i></span>
       <ul class="personal">
         <li class="fullScreen" @click="fullScreen">
           <el-tooltip class="item" effect="dark" content="全屏" placement="bottom"><i
-            class="fa fa-arrows-alt fa-lg">111</i></el-tooltip>
+            class="el-icon-full-screen"></i></el-tooltip>
         </li>
         <li>
           <langSelect></langSelect>
         </li>
-        <li>你好</li>
         <li>
           <el-dropdown @command="handleCommand">
                   <span class="el-dropdown-link">
                     夏洛克丶旭<i class="el-icon-arrow-down el-icon--right"></i>
                   </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item command="a">是</el-dropdown-item>
-              <el-dropdown-item command="b">是</el-dropdown-item>
-              <el-dropdown-item command="logout" divided>是</el-dropdown-item>
+              <el-dropdown-item command="a"><i class="el-icon-chat-dot-round"></i>消息</el-dropdown-item>
+              <el-dropdown-item command="b"><i class="el-icon-star-off"></i>关注</el-dropdown-item>
+              <el-dropdown-item command="logout" divided><i class="el-icon-circle-close"></i>退出</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </li>
-        <li class="icon"><img :src="avatar"/></li>
+        <li class="icon"><el-avatar size="large" fit="fill" :src="squareUrl"></el-avatar></li>
       </ul>
     </el-header>
     <tabNav></tabNav>
@@ -40,7 +39,7 @@ export default {
   data () {
     return {
       isfullScreen: true,
-      avatar: './static/images/icon.jpg'
+      squareUrl: '../../../assets/logo.png'
     }
   },
   methods: {
