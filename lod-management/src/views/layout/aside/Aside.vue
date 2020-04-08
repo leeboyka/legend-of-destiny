@@ -2,7 +2,7 @@
   <div>
     <el-aside id="asideNav">
       <div class="logo-name">
-        <div><img height="200px" src="../../../assets/logo.png"/></div>
+        <img v-show="!$store.getters.isCollapse" src="../../../assets/logo.png" alt=""/>
         <p v-if="$store.getters.logoShow">XU</p>
         <p v-else>vue-xuAdmin后台模板</p>
       </div>
@@ -104,11 +104,13 @@ export default {
     display: flex;
     flex-direction: column;
     border-right: solid 1px #e6e6e6;
+
     .logo-name {
       background-color: #03152A !important;
       @extend %w100;
       font-weight: 300;
       z-index: 999;
+
       p {
         height: 50px;
         line-height: 50px;
@@ -117,19 +119,23 @@ export default {
         color: #5e6d82;
       }
     }
+
     .el-menu-vertical:not(.el-menu--collapse) {
       width: 200px;
       @extend %h100;
       overflow-y: scroll;
       overflow-x: hidden;
     }
+
     .el-menu {
       flex: 1;
       overflow: inherit;
       border-right: none;
+
       &::-webkit-scrollbar {
         display: none;
       }
+
       .fa {
         vertical-align: middle;
         margin-right: 5px;
@@ -137,17 +143,21 @@ export default {
         text-align: center;
         font-size: 18px;
       }
+
       .el-menu-item {
         background-color: #020f1d !important;
         border-bottom: 1px solid #020f1d;
+
         &:hover {
           color: #ffffff !important;
           background-color: #375573 !important;
         }
       }
+
       .el-menu-item.is-active {
         background-color: #56a9ff !important
       }
+
       .is-opened > .el-submenu__title > .el-icon-arrow-down {
         color: #ffffff;
         font-weight: 500;

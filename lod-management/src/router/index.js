@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/views/Login'
 import Layout from '@/views/layout/Layout'
+import Home from '@/views/home/Home'
 
 // 不是必须加载的组件使用懒加载
 Vue.use(Router)
@@ -32,7 +33,7 @@ const defaultRouter = [
         path: '/index',
         iconCls: 'fa fa-dashboard', // 图标样式class
         name: '主页',
-        component: Login,
+        component: Home,
         children: []
       }
     ]
