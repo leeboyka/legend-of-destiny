@@ -1,9 +1,6 @@
 <template>
   <el-dropdown class='international' @command="handleSetLanguage">
-    <div>
-      <span class="el-dropdown-link"><i class="fa fa-language fa-lg"></i>&nbsp;{{language}}<i class="el-icon-arrow-down el-icon--right"></i>
-    </span>
-    </div>
+    <span class="el-dropdown-link">{{language}}<i class="el-icon-arrow-down el-icon--right"></i></span>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item command="cn">中文</el-dropdown-item>
       <el-dropdown-item command="en">English</el-dropdown-item>

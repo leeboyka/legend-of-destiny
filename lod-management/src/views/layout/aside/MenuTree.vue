@@ -3,14 +3,14 @@
       <template v-for="(child,index) in menuData">
         <el-submenu :key="index" v-if="child.children.length > 0" :index="child.path">
           <template slot="title">
-            <i :class="child.iconCls?child.iconCls:[fa,fa-file]"></i>
+            <font-awesome-icon :icon="child.iconNameAwesome" size="2x"/>
             <span slot="title">{{ $t(`routeName.${child.name}`) }}</span>
           </template>
           <menu-tree :menuData="child.children"></menu-tree>
         </el-submenu>
 
         <el-menu-item :key="index" v-else-if="!child.hidden" :index="child.path">
-          <i :class="child.iconCls?child.iconCls:[fa,fa-file]"></i>
+          <font-awesome-icon :icon="child.iconNameAwesome" size="2x"/>
           <span slot="title">{{ $t(`routeName.${child.name}`) }}</span>
         </el-menu-item>
       </template>

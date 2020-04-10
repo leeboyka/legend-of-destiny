@@ -6,6 +6,18 @@ import router from './router'
 import store from './store'
 import i18n from './i18n/i18n'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
+
+library.add(fas, far, fab)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-layers', FontAwesomeLayers)
+Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
+
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
@@ -14,7 +26,6 @@ Vue.use(ElementUI)
 router.beforeEach((to, from, next) => {
   console.log(store.getters.token)
   console.log(to.path, from.path)
-  debugger
   if (store.getters.token) {
     store.dispatch('setToken', store.getters.token)
     if (to.path === '/login') {

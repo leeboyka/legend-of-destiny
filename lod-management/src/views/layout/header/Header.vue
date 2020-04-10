@@ -1,11 +1,12 @@
 <template>
   <div>
     <el-header id="header">
-      <span class="hideAside" @click="collapse"><i class="el-icon-s-fold"></i></span>
+      <span class="hideAside" @click="collapse"><font-awesome-icon icon="server" size="2x"/></span>
       <ul class="personal">
         <li class="fullScreen" @click="fullScreen">
-          <el-tooltip class="item" effect="dark" content="全屏" placement="bottom"><i
-            class="el-icon-full-screen"></i></el-tooltip>
+          <el-tooltip class="item" effect="dark" content="全屏" placement="bottom">
+            <font-awesome-icon icon="expand-arrows-alt"/>
+          </el-tooltip>
         </li>
         <li>
           <langSelect></langSelect>

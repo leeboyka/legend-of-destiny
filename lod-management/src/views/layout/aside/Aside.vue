@@ -19,16 +19,16 @@
         <template v-for="(item,index) in $store.getters.routers">
           <el-submenu v-if="!item.hidden && !item.alone && item.children.length>0" :key="index" :index="index+''">
             <template slot="title">
-              <i :class="item.iconCls?item.iconCls:[fa,fa-server]"></i>
-              <span slot="title">{{ $t(`routeName.${item.name}`) }}</span>
+              <font-awesome-icon :icon="item.iconNameAwesome" size="2x"/>
+              <span slot="title" class="menu-title">{{ $t(`routeName.${item.name}`) }}</span>
             </template>
 
             <menu-tree :menuData="item.children"></menu-tree>
 
           </el-submenu>
           <el-menu-item v-else-if="!item.hidden" :key="index" :index="item.path">
-            <i :class="item.iconCls?item.iconCls:[fa,fa-file]"></i>
-            <span slot="title">{{ $t(`routeName.${item.name}`) }}</span>
+            <font-awesome-icon :icon="item.iconNameAwesome" size="2x"/>
+            <span slot="title" class="menu-title">{{ $t(`routeName.${item.name}`) }}</span>
           </el-menu-item>
         </template>
 
@@ -136,12 +136,8 @@ export default {
         display: none;
       }
 
-      .fa {
-        vertical-align: middle;
-        margin-right: 5px;
-        width: 24px;
-        text-align: center;
-        font-size: 18px;
+      .menu-title {
+        padding-left: 10px;
       }
 
       .el-menu-item {
@@ -163,6 +159,7 @@ export default {
         font-weight: 500;
         font-size: 18px;
       }
+
     }
 
   }

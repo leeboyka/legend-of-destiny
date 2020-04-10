@@ -3,14 +3,14 @@
     <el-row :gutter="20">
       <el-col :span="8">
         <div class="card kjfs">
-          <p class="title"><i class="fa fa-th-large fa-lg"></i>快捷方式</p>
+          <p class="title"><font-awesome-icon icon="thumbtack"/> 快捷方式</p>
           <ul>
-            <li><router-link to="/addArticle" class="kjfs kjfs-bluee"><span><i class="el-icon-tickets fa-2x"></i></span><span>发表文章</span></router-link></li>
-            <li><router-link to="/dragTabe" class="kjfs kjfs-pinkk"><span><i class="fa fa-hand-stop-o fa-2x"></i></span><span>拖拽排序</span></router-link></li>
-            <li><router-link to="/pagePermissions" class="kjfs kjfs-yelloww"><span><i class="fa fa-universal-access fa-2x"></i></span><span>权限测试</span></router-link></li>
+            <li><router-link to="/addArticle" class="kjfs kjfs-bluee"><span><font-awesome-icon icon="file-signature" size="3x"/></span><span>发表文章</span></router-link></li>
+            <li><router-link to="/dragTabe" class="kjfs kjfs-pinkk"><span><font-awesome-icon icon="hand-paper" size="3x"/></span><span>拖拽排序</span></router-link></li>
+            <li><router-link to="/pagePermissions" class="kjfs kjfs-yelloww"><span><font-awesome-icon icon="user-cog" size="3x"/></span><span>权限管理</span></router-link></li>
           </ul>
           <ul>
-            <li><router-link to="/upload" class="kjfs kjfs-grennn"><span><i class="fa fa-cloud-upload fa-2x"></i></span><span>文件上传</span></router-link></li>
+            <li><router-link to="#" class="kjfs kjfs-grennn"><span><font-awesome-icon icon="upload" size="3x"/></span><span>文件上传</span></router-link></li>
             <li><router-link to="/navClassifies" class="kjfs kjfs-purplee"><span><i class="fa el-icon-menu fa-2x"></i></span><span>前台菜单</span></router-link></li>
             <li><router-link to="/markdown" class="kjfs kjfs-lightBluee"><span><i class="fa fa-file-code-o fa-2x"></i></span><span>编辑器</span></router-link></li>
           </ul>
@@ -194,7 +194,7 @@ export default {
         border: 1px solid #cccccc;
         overflow: hidden;
         border-#{$top}: none;
-        @include flex( null,start);
+        @include flex( null,flex-start);
         &:first-child{
           border-#{$top}: 1px solid #cccccc;
         }
@@ -212,7 +212,7 @@ export default {
           flex: 1;
           height: 100%;
           overflow: hidden;
-          @include flex(row,start);
+          @include flex(row,flex-start);
           a{
             &:first-child{
               margin-#{$right}: 30px;

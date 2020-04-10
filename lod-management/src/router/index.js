@@ -24,14 +24,14 @@ const defaultRouter = [
   },
   {
     path: '/index',
-    iconCls: 'fa fa-dashboard', // 图标样式class
+    iconNameAwesome: 'home', // 图标样式class
     name: routeName.home,
     component: Layout,
     alone: true,
     children: [
       {
         path: '/index',
-        iconCls: 'fa fa-dashboard', // 图标样式class
+        iconNameAwesome: 'home', // 图标样式class
         name: '主页',
         component: Home,
         children: []
@@ -50,20 +50,20 @@ const defaultRouter = [
 const addRouter = [
   {
     path: '/',
-    iconCls: 'el-icon-tickets', // 图标样式class
+    iconNameAwesome: 'file-signature', // 图标样式class
     name: routeName.article,
     component: Layout,
     children: [
       {
         path: '/addArticle',
-        iconCls: 'el-icon-edit-outline', // 图标样式class
+        iconNameAwesome: 'file-signature', // 图标样式class
         name: routeName.publishArticle,
         component: Login,
         children: []
       },
       {
         path: '/addArticleEditor',
-        iconCls: 'el-icon-edit-outline', // 图标样式class
+        iconNameAwesome: 'file-signature', // 图标样式class
         name: routeName.publishArticleEditor,
         component: Layout,
         children: []
@@ -72,20 +72,20 @@ const addRouter = [
   },
   {
     path: '/',
-    iconCls: 'fa fa-universal-access', // 图标样式class
+    iconNameAwesome: 'user-cog', // 图标样式class
     name: routeName.permissions,
     component: Layout,
     children: [
       {
         path: '/pagePermissions',
-        iconCls: 'fa fa-expeditedssl', // 图标样式class
+        iconNameAwesome: 'home', // 图标样式class
         name: routeName.pageControl,
         component: Login,
         children: []
       },
       {
         path: '/btnPermissions',
-        iconCls: 'fa fa-toggle-on', // 图标样式class
+        iconNameAwesome: 'fa fa-toggle-on', // 图标样式class
         name: routeName.btnControl,
         component: Login,
         children: []
@@ -94,27 +94,27 @@ const addRouter = [
   },
   {
     path: '/',
-    iconCls: 'fa fa-newspaper-o', // 图标样式class
+    iconNameAwesome: 'th-list', // 图标样式class
     name: routeName.table,
     component: Layout,
     children: [
       {
         path: '/dataTable',
-        iconCls: 'fa fa-sliders', // 图标样式class
+        iconNameAwesome: 'fa fa-sliders', // 图标样式class
         name: routeName.multiDataTable,
         component: Login,
         children: []
       },
       {
         path: '/filterTable',
-        iconCls: 'fa fa-sort-amount-asc', // 图标样式class
+        iconNameAwesome: 'fa fa-sort-amount-asc', // 图标样式class
         name: routeName.filterTable,
         component: Login,
         children: []
       },
       {
         path: '/dragTabe',
-        iconCls: 'fa fa-hand-stop-o', // 图标样式class
+        iconNameAwesome: 'fa fa-hand-stop-o', // 图标样式class
         name: routeName.dragSort,
         component: Login,
         children: []

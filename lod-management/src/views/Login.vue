@@ -45,7 +45,7 @@
             </div>
             <div class="ewmbox">
               <div class="ewm">
-                <img src="https://img.alicdn.com/tfscom/TB1ivYYyHvpK1RjSZFqwu3XUVXa.png">
+                <img alt="" src="https://img.alicdn.com/tfscom/TB1ivYYyHvpK1RjSZFqwu3XUVXa.png">
               </div>
               <div class="ewmicon">
                 <i class="iconfont xu-saomadenglu fa-2x iconcolor"></i>
@@ -149,7 +149,7 @@ export default {
         height: 388px;
 
         .el-card__header {
-          border-bottom: 0px;
+          border-bottom: 0;
         }
         .title{
           font-size: 36px;
@@ -157,7 +157,7 @@ export default {
           color: #ffffff;
           width: 500px;
           float: left;
-          margin-top: 0px;
+          margin-top: 0;
           &:first-child{
             font-size: 34px;
             margin-top: 50px;
