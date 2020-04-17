@@ -19,7 +19,7 @@
         <template v-for="(item,index) in $store.getters.routers">
           <el-submenu v-if="!item.hidden && !item.alone && item.children.length>0" :key="index" :index="index+''">
             <template slot="title">
-              <font-awesome-icon :icon="item.iconNameAwesome" size="2x"/>
+              <font-awesome-icon :icon="item.iconNameAwesome"/>
               <span slot="title" class="menu-title">{{ $t(`routeName.${item.name}`) }}</span>
             </template>
 
@@ -27,7 +27,7 @@
 
           </el-submenu>
           <el-menu-item v-else-if="!item.hidden" :key="index" :index="item.path">
-            <font-awesome-icon :icon="item.iconNameAwesome" size="2x"/>
+            <font-awesome-icon :icon="item.iconNameAwesome"/>
             <span slot="title" class="menu-title">{{ $t(`routeName.${item.name}`) }}</span>
           </el-menu-item>
         </template>

@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import Login from '@/views/Login'
 import Layout from '@/views/layout/Layout'
 import Home from '@/views/home/Home'
+import Member from '@/views/user/member'
+import Permission from '@/views/user/permission'
 
 // 不是必须加载的组件使用懒加载
 Vue.use(Router)
@@ -50,6 +52,28 @@ const defaultRouter = [
 const addRouter = [
   {
     path: '/',
+    iconNameAwesome: 'users-cog', // 图标样式class
+    name: routeName.user,
+    component: Layout,
+    children: [
+      {
+        path: '/member',
+        iconNameAwesome: 'user-cog', // 图标样式class
+        name: routeName.member,
+        component: Member,
+        children: []
+      },
+      {
+        path: '/permission',
+        iconNameAwesome: 'th-large', // 图标样式class
+        name: routeName.menu,
+        component: Permission,
+        children: []
+      }
+    ]
+  },
+  {
+    path: '/',
     iconNameAwesome: 'file-signature', // 图标样式class
     name: routeName.article,
     component: Layout,
@@ -58,65 +82,14 @@ const addRouter = [
         path: '/addArticle',
         iconNameAwesome: 'file-signature', // 图标样式class
         name: routeName.publishArticle,
-        component: Login,
+        component: Member,
         children: []
       },
       {
         path: '/addArticleEditor',
         iconNameAwesome: 'file-signature', // 图标样式class
         name: routeName.publishArticleEditor,
-        component: Layout,
-        children: []
-      }
-    ]
-  },
-  {
-    path: '/',
-    iconNameAwesome: 'user-cog', // 图标样式class
-    name: routeName.permissions,
-    component: Layout,
-    children: [
-      {
-        path: '/pagePermissions',
-        iconNameAwesome: 'home', // 图标样式class
-        name: routeName.pageControl,
-        component: Login,
-        children: []
-      },
-      {
-        path: '/btnPermissions',
-        iconNameAwesome: 'fa fa-toggle-on', // 图标样式class
-        name: routeName.btnControl,
-        component: Login,
-        children: []
-      }
-    ]
-  },
-  {
-    path: '/',
-    iconNameAwesome: 'th-list', // 图标样式class
-    name: routeName.table,
-    component: Layout,
-    children: [
-      {
-        path: '/dataTable',
-        iconNameAwesome: 'fa fa-sliders', // 图标样式class
-        name: routeName.multiDataTable,
-        component: Login,
-        children: []
-      },
-      {
-        path: '/filterTable',
-        iconNameAwesome: 'fa fa-sort-amount-asc', // 图标样式class
-        name: routeName.filterTable,
-        component: Login,
-        children: []
-      },
-      {
-        path: '/dragTabe',
-        iconNameAwesome: 'fa fa-hand-stop-o', // 图标样式class
-        name: routeName.dragSort,
-        component: Login,
+        component: Member,
         children: []
       }
     ]
