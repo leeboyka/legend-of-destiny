@@ -3,9 +3,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/views/Login'
 import Layout from '@/views/layout/Layout'
+import Menu from '@/views/privilege/Menu'
+import Permission from '@/views/privilege/Permission'
 import Home from '@/views/home/Home'
-import Member from '@/views/user/member'
-import Permission from '@/views/user/permission'
+import Member from '@/views/user/Member'
+import GroupRole from '@/views/user/GroupRole'
 
 // 不是必须加载的组件使用懒加载
 Vue.use(Router)
@@ -52,21 +54,43 @@ const defaultRouter = [
 const addRouter = [
   {
     path: '/',
-    iconNameAwesome: 'users-cog', // 图标样式class
+    iconNameAwesome: 'users', // 图标样式class
     name: routeName.user,
     component: Layout,
     children: [
       {
         path: '/member',
-        iconNameAwesome: 'user-cog', // 图标样式class
+        iconNameAwesome: 'user-plus', // 图标样式class
         name: routeName.member,
         component: Member,
         children: []
       },
       {
-        path: '/permission',
+        path: '/groupRole',
+        iconNameAwesome: 'user-secret', // 图标样式class
+        name: routeName.groupRole,
+        component: GroupRole,
+        children: []
+      }
+    ]
+  },
+  {
+    path: '/',
+    iconNameAwesome: 'users-cog', // 图标样式class
+    name: routeName.privilege,
+    component: Layout,
+    children: [
+      {
+        path: '/menu',
         iconNameAwesome: 'th-large', // 图标样式class
         name: routeName.menu,
+        component: Menu,
+        children: []
+      },
+      {
+        path: '/permission',
+        iconNameAwesome: 'user-cog', // 图标样式class
+        name: routeName.permission,
         component: Permission,
         children: []
       }
@@ -74,22 +98,22 @@ const addRouter = [
   },
   {
     path: '/',
-    iconNameAwesome: 'file-signature', // 图标样式class
-    name: routeName.article,
+    iconNameAwesome: 'cogs', // 图标样式class
+    name: routeName.systemSettings,
     component: Layout,
     children: [
       {
-        path: '/addArticle',
-        iconNameAwesome: 'file-signature', // 图标样式class
-        name: routeName.publishArticle,
-        component: Member,
+        path: '/menu',
+        iconNameAwesome: 'th-large', // 图标样式class
+        name: routeName.menu,
+        component: Menu,
         children: []
       },
       {
-        path: '/addArticleEditor',
-        iconNameAwesome: 'file-signature', // 图标样式class
-        name: routeName.publishArticleEditor,
-        component: Member,
+        path: '/permission',
+        iconNameAwesome: 'user-cog', // 图标样式class
+        name: routeName.permission,
+        component: Permission,
         children: []
       }
     ]

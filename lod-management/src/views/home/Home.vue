@@ -5,9 +5,9 @@
         <div class="card kjfs">
           <p class="title"><font-awesome-icon icon="thumbtack"/> 快捷方式</p>
           <ul>
-            <li><router-link to="/addArticle" class="kjfs kjfs-bluee"><span><font-awesome-icon icon="file-signature" size="3x"/></span><span>发表文章</span></router-link></li>
-            <li><router-link to="/member" class="kjfs kjfs-pinkk"><span><font-awesome-icon icon="user-cog" size="3x"/></span><span>会员管理</span></router-link></li>
-            <li><router-link to="/permission" class="kjfs kjfs-yelloww"><span><font-awesome-icon icon="th-large" size="3x"/></span><span>菜单管理</span></router-link></li>
+            <li><router-link to="/member" class="kjfs kjfs-pinkk"><span><font-awesome-icon icon="users" size="3x"/></span><span>会员管理</span></router-link></li>
+            <li><router-link to="/permission" class="kjfs kjfs-yelloww"><span><font-awesome-icon icon="user-cog" size="3x"/></span><span>角色权限</span></router-link></li>
+            <li><router-link to="/menu" class="kjfs kjfs-bluee"><span><font-awesome-icon icon="th-large" size="3x"/></span><span>菜单管理</span></router-link></li>
           </ul>
           <ul>
             <li><router-link to="#" class="kjfs kjfs-grennn"><span><font-awesome-icon icon="upload" size="3x"/></span><span>文件上传</span></router-link></li>

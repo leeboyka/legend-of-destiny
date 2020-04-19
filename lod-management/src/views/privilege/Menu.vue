@@ -1,14 +1,10 @@
 <template>
-  <div class="permission">
+  <div class="menu">
     <vxe-toolbar :refresh="{query: reload}" export custom>
       <template v-slot:buttons>
+        <vxe-button status="primary"  @click="changeTreeExpansion($refs.xTree)">{{expansionTitle}}</vxe-button>
+        <vxe-button status="primary" @click="getInsertEvent">新增菜单</vxe-button>
         <vxe-input v-model="filterName" type="search" placeholder="试试全表搜索"></vxe-input>
-        <vxe-button @click="insertEvent">{{ $t('app.body.button.insert') }}</vxe-button>
-        <vxe-button @click="removeEvent">移除选中</vxe-button>
-        <vxe-button @click="getInsertEvent">获取新增</vxe-button>
-        <vxe-button @click="getRemoveEvent">获取删除</vxe-button>
-        <vxe-button @click="getUpdateEvent">获取修改</vxe-button>
-        <vxe-button @click="saveEvent">保存</vxe-button>
       </template>
     </vxe-toolbar>
 
@@ -25,7 +21,7 @@
       :loading="loading"
       :tree-config="treeConfig"
       :data="tableData">
-      <vxe-table-column field="name" title="Name" fixed="left" tree-node>
+      <vxe-table-column field="name" title="菜单名称" fixed="left" tree-node>
         <template v-slot="{ row }">
           <span>
             <template v-if="row.children && row.children.length">
@@ -38,13 +34,21 @@
           </span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="id" title="Id" fixed="left"></vxe-table-column>
-      <vxe-table-column field="address" title="Address"></vxe-table-column>
-      <vxe-table-column field="date" title="Date" fixed="right"></vxe-table-column>
-      <vxe-table-column title="操作" width="100" fixed="right">
+      <vxe-table-column field="id" title="菜单代码" fixed="left"></vxe-table-column>
+      <vxe-table-column field="address" title="菜单顺序"></vxe-table-column>
+      <vxe-table-column field="date" title="菜单图标" fixed="right"></vxe-table-column>
+      <vxe-table-column field="date" title="启用状态" fixed="right">
         <template v-slot="{ row }">
-          <vxe-button type="text" @click="editEvent(row)"><font-awesome-icon icon="edit"/></vxe-button>
-          <vxe-button type="text"><font-awesome-icon icon="trash-alt"/></vxe-button>
+          <span>
+            <vxe-button v-if="row.children && row.children.length" type="text" status="success"><i class="vxe-icon--success"></i><span class="menu-name-left">已启用</span></vxe-button>
+            <vxe-button v-else type="text" status="warning"><i class="vxe-icon--error"></i><span class="menu-name-left">已禁用</span></vxe-button>
+          </span>
+        </template>
+      </vxe-table-column>
+      <vxe-table-column title="操作" width="150" fixed="right">
+        <template v-slot="{ row }">
+          <vxe-button type="text" status="primary" @click="editEvent(row)"><font-awesome-icon icon="edit"/>&nbsp;编辑</vxe-button>
+          <vxe-button type="text" status="danger"><font-awesome-icon icon="trash-alt"/>&nbsp;删除</vxe-button>
         </template>
       </vxe-table-column>
     </vxe-table>
@@ -73,9 +77,11 @@
 
 <script>
 export default {
-  name: 'permission',
+  name: 'menu',
   data () {
     return {
+      treeExpansion: false,
+      expansionTitle: '展开菜单',
       loading: false,
       filterName: '',
       tableData: [{
@@ -220,15 +226,28 @@ export default {
         address: row.address
       }
       this.showEdit = true
+    },
+    changeTreeExpansion (tree) {
+      if (this.treeExpansion) {
+        tree.clearTreeExpand()
+        this.expansionTitle = '展开菜单'
+      } else {
+        tree.setAllTreeExpansion(true)
+        this.expansionTitle = '关闭菜单'
+      }
+      this.treeExpansion = !this.treeExpansion
     }
   }
 }
 </script>
 
 <style lang="scss">
-  .permission{
+  .menu{
     .menu-name-left{
       padding-left: 5px;
+    }
+    .vxe-input{
+      margin-left: .8em;
     }
   }
 </style>

@@ -13,9 +13,7 @@
         </li>
         <li>
           <el-dropdown @command="handleCommand">
-                  <span class="el-dropdown-link">
-                    夏洛克丶旭<i class="el-icon-arrow-down el-icon--right"></i>
-                  </span>
+            <span class="icon"><img src="../../../assets/avatar.jpg" alt=""/></span>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="a"><i class="el-icon-chat-dot-round"></i>消息</el-dropdown-item>
               <el-dropdown-item command="b"><i class="el-icon-star-off"></i>关注</el-dropdown-item>
@@ -23,7 +21,6 @@
             </el-dropdown-menu>
           </el-dropdown>
         </li>
-        <li class="icon"><el-avatar size="large" fit="fill" :src="squareUrl"></el-avatar></li>
       </ul>
     </el-header>
     <tabNav></tabNav>
@@ -39,8 +36,7 @@ export default {
   components: { tabNav, langSelect },
   data () {
     return {
-      isfullScreen: true,
-      squareUrl: '../../../assets/logo.png'
+      isfullScreen: true
     }
   },
   methods: {
@@ -130,11 +126,14 @@ export default {
       .el-dropdown-link {
         @extend %cursor;
       }
+      .el-dropdown {
+        max-height: 40px;
+      }
       .icon img {
         margin-#{$top}: 7px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
-        border-radius: 5px;
+        border-radius: 20px;
         width: 40px;
         height: 40px;
       }
