@@ -39,6 +39,7 @@ const hideLoading = () => {
 
 /** **** request拦截器==>对请求参数做处理 ******/
 service.interceptors.request.use(config => {
+  debugger
   showLoading(config)
 
   config.method === 'post'
@@ -52,6 +53,7 @@ service.interceptors.request.use(config => {
 
 /** **** response拦截器==>对响应做处理 ******/
 service.interceptors.response.use(response => { // 成功请求到数据
+  debugger
   // 响应拦截进来隐藏loading效果
   setTimeout(() => {
     // 此处采用延时处理是合并loading请求效果，避免loading闪烁
