@@ -11,11 +11,11 @@ export default {
 </script>
 
 <style scoped>
-p{
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  font-size: 12px;
-  color: #999999;
-}
+  p{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+  }
 </style>

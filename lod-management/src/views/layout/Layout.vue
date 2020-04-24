@@ -5,10 +5,10 @@
       <el-container>
         <layoutHeader></layoutHeader>
         <el-main id="elmain">
-        <transition name="main" mode="out-in">
-          <router-view></router-view>
-        </transition>
-      </el-main>
+          <transition name="main" mode="out-in">
+            <router-view></router-view>
+          </transition>
+        </el-main>
         <el-footer>
           <Bottom></Bottom>
         </el-footer>
@@ -51,8 +51,8 @@ export default {
 </style>
 <style lang="scss">
   * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
   }
 
   body {
