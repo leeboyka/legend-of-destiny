@@ -208,7 +208,7 @@
 </template>
 
 <script>
-import { getChapterContent } from '../../service/api/storyapi'
+import { getChapterContent } from '../../../service/api/storyapi'
 
 export default {
   name: 'ReadView',
@@ -235,18 +235,18 @@ export default {
       value2: null,
       colors: ['#99A9BF', '#F7BA2A', '#FF9900'],
       note: {
-        backgroundImage: 'url(' + require('../../assets/background.jpg') + ')',
+        backgroundImage: 'url(' + require('../../../assets/background.jpg') + ')',
         backgroundRepeat: 'repeat',
         backgroundSize: '100%',
         padding: '80px 0 50px 0'
       },
       note1: {
-        backgroundImage: 'url(' + require('../../assets/paper.jpg') + ')',
+        backgroundImage: 'url(' + require('../../../assets/paper.jpg') + ')',
         backgroundRepeat: 'repeat',
         backgroundSize: '25px auto'
       },
       note2: {
-        backgroundImage: 'url(' + require('../../assets/paper.jpg') + ')',
+        backgroundImage: 'url(' + require('../../../assets/paper.jpg') + ')',
         backgroundRepeat: 'repeat',
         backgroundSize: '25px auto'
       }

@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home/Home.vue'
-import ReadView from '../views/story/ReadView.vue'
 import BlogHome from '../views/blog/BlogHome.vue'
+import StoryHome from '../views/story/StoryHome.vue'
+import ReadView from '../views/story/read/ReadView.vue'
 
 Vue.use(VueRouter)
 
@@ -15,7 +16,7 @@ const routes = [
       {
         path: '/story',
         name: 'story',
-        component: ReadView
+        component: StoryHome
       },
       {
         path: '/blog',
