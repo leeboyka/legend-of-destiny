@@ -3,9 +3,9 @@
     <el-header id="header">
       <ul class="menuNav">
         <li><router-link to="/">主站首页</router-link></li>
-        <li>社区论坛</li>
-        <li><router-link to="/readView">小说漫画</router-link></li>
-        <li>在线游戏</li>
+        <li><router-link to="/blog">博客社区</router-link></li>
+        <li><router-link to="/story">小说漫画</router-link></li>
+        <li><router-link to="/game">在线游戏</router-link></li>
       </ul>
       <ul>
         <li>

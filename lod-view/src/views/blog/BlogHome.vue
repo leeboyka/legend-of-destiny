@@ -1,0 +1,51 @@
+<template>
+  <div id="blogHome">
+    <el-row :gutter="20">
+      <el-col :span="7">
+        <el-row>
+          <el-col :span="14" :offset="10">
+            <hot-tab style="margin-bottom: 20px"></hot-tab>
+            <concern-tab></concern-tab>
+          </el-col>
+        </el-row>
+      </el-col>
+      <el-col :span="10">
+        <main-view></main-view>
+      </el-col>
+      <el-col :span="7">
+        <el-row>
+          <el-col :span="14">
+            <personal-tab style="margin-bottom: 20px"></personal-tab>
+            <announcement></announcement>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+  </div>
+</template>
+
+<script>
+import mainView from './center/MainView'
+import hotTab from './left/HotTab'
+import concernTab from './left/ConcernTab'
+import personalTab from './right/PersonalTab'
+import announcement from './right/Announcement'
+
+export default {
+  name: 'BlogHome',
+  components: {
+    mainView,
+    hotTab,
+    concernTab,
+    personalTab,
+    announcement
+  }
+}
+</script>
+
+<style lang="scss">
+  #blogHome {
+    text-align: left;
+  }
+
+</style>

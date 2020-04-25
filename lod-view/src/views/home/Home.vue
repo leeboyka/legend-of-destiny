@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <el-container>
-      <homeHeader></homeHeader>
+      <home-header></home-header>
       <el-main id="homeMain">
         <transition name="main" mode="out-in">
           <router-view></router-view>

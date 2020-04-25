@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home/Home.vue'
 import ReadView from '../views/story/ReadView.vue'
+import BlogHome from '../views/blog/BlogHome.vue'
 
 Vue.use(VueRouter)
 
@@ -12,8 +13,18 @@ const routes = [
     component: Home,
     children: [
       {
-        path: '/readView',
-        name: 'readView',
+        path: '/story',
+        name: 'story',
+        component: ReadView
+      },
+      {
+        path: '/blog',
+        name: 'blog',
+        component: BlogHome
+      },
+      {
+        path: '/game',
+        name: 'game',
         component: ReadView
       }
     ]
