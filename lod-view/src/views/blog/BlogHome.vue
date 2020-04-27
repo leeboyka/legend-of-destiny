@@ -5,7 +5,6 @@
         <el-row>
           <el-col :span="14" :offset="10">
             <hot-tab style="margin-bottom: 20px"></hot-tab>
-            <concern-tab></concern-tab>
           </el-col>
         </el-row>
       </el-col>
@@ -16,6 +15,7 @@
         <el-row>
           <el-col :span="14">
             <personal-tab style="margin-bottom: 20px"></personal-tab>
+            <concern-tab style="margin-bottom: 20px"></concern-tab>
             <announcement></announcement>
           </el-col>
         </el-row>
@@ -27,7 +27,7 @@
 <script>
 import mainView from './center/MainView'
 import hotTab from './left/HotTab'
-import concernTab from './left/ConcernTab'
+import concernTab from '../home/Layout/ConcernTab'
 import personalTab from './right/PersonalTab'
 import announcement from './right/Announcement'
 
