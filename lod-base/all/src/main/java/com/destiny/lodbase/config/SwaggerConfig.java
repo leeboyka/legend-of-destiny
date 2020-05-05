@@ -42,7 +42,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
 
     @Bean
-    public Docket createHnsApi() {
+    public Docket createCommonApi() {
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .enable(enableSwagger)
@@ -52,6 +52,19 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .paths(PathSelectors.any())
                 .build()
                 .groupName("common");
+    }
+
+    @Bean
+    public Docket createSecurityApi() {
+
+        return new Docket(DocumentationType.SWAGGER_2)
+                .enable(enableSwagger)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.destiny.lodbase.security"))
+                .paths(PathSelectors.any())
+                .build()
+                .groupName("security");
     }
 
 
