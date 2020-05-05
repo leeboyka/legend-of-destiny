@@ -23,6 +23,7 @@
     <modules>
         <module>all</module>
         <module>common</module>
+        <module>security</module>
     </modules>
 
     <properties>

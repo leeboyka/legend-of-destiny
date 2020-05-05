@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.destiny.lodbase.security.mapper.UserMapper">
+    <select id="loadUserByUsername" parameterType="java.lang.String" resultType="com.destiny.lodbase.security.controller.User">
+        select ElementNumber from DataElement
+        where ElementCode = #{code}
+    </select>
+    <select id="getUserRolesByUid" parameterType="java.lang.Integer" resultType="com.destiny.lodbase.security.controller.Role">
+        select *from SYS_USER_ROLE where user_id = #{id}
+    </select>
+</mapper>
