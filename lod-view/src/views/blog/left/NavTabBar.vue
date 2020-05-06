@@ -1,8 +1,9 @@
 <template>
-  <div id="hotTab">
+  <div id="navTabBar">
     <el-card class="hot-tab-card">
-      <div slot="header">
-        <span>热门推荐</span>
+      <div slot="header" style="text-align: center">
+        <font-awesome-icon icon="spider" size="4x"/>
+        <p>博客社区</p>
       </div>
       <div v-for="o in 6" :key="o" class="text item">
         {{'列表内容 ' + o }}
@@ -13,10 +14,10 @@
 
 <script>
 export default {
-  name: 'HotTab'
+  name: 'NavTabBar'
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>

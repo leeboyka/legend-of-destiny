@@ -6,6 +6,7 @@
         <li><router-link to="/blog">博客社区</router-link></li>
         <li><router-link to="/story">小说漫画</router-link></li>
         <li><router-link to="/game">在线游戏</router-link></li>
+        <li><router-link to="/game">私人网盘</router-link></li>
       </ul>
       <ul>
         <li>
