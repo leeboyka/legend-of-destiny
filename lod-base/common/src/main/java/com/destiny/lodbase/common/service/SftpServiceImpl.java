@@ -4,11 +4,8 @@ import com.destiny.lodbase.common.pojo.SftpAuthority;
 import org.springframework.stereotype.Service;
 
 /**
- * @description
- * @author: lenovo
- * @date: 2020/5/8 13:59
- * @version:
- * @modified By:
+ *
+ * @author lee
  */
 @Service
 public class SftpServiceImpl implements SftpService {

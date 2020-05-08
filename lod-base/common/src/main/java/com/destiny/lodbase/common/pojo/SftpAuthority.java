@@ -7,11 +7,8 @@ import lombok.Setter;
 import javax.annotation.Resource;
 
 /**
- * @description
- * @author: lenovo
- * @date: 2020/5/8 10:46
- * @version:
- * @modified By:
+ *
+ * @author lee
  */
 @Getter
 @Setter
