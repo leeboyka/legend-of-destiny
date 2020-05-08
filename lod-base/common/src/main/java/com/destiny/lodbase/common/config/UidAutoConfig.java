@@ -1,6 +1,6 @@
 package com.destiny.lodbase.common.config;
 
-import com.destiny.lodbase.common.service.DefaultUidServiceImpl;
+import com.destiny.lodbase.common.service.UidServiceImpl;
 import com.destiny.lodbase.common.service.UidService;
 import com.github.wujun234.uid.utils.DockerUtils;
 import com.github.wujun234.uid.utils.NetUtils;
@@ -19,13 +19,13 @@ import org.springframework.context.annotation.Configuration;
  * @author leeboyka
  */
 @Configuration
-@ConditionalOnClass({DefaultUidServiceImpl.class})
+@ConditionalOnClass({UidServiceImpl.class})
 public class UidAutoConfig {
 
     @Bean
     @ConditionalOnMissingBean
     UidService uidService() {
-        return new DefaultUidServiceImpl();
+        return new UidServiceImpl();
     }
 
     @Bean

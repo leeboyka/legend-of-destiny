@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.destiny.lodservice.legends.mapper.HalloMapper">
-<select id="getHallo" parameterType="java.lang.String" resultType="java.lang.String">
-        select ElementNumber from DataElement
-        where ElementCode = #{code}
+    <select id="getHallo" parameterType="java.lang.String" resultType="java.lang.String">
+         select CONVERT(varchar(4),GETDATE(),120) YEAR
     </select>
 </mapper>

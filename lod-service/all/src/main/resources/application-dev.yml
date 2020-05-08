@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:sqlserver:localhost;DatabaseName=DatabaseName
-    data-username: username
-    data-password: password
+    url: jdbc:sqlserver://localhost;DatabaseName=PT_HNS_HLW
+    username: sa
+    password: 1

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * @author leeboyka
  */
-public class DefaultUidServiceImpl implements UidService {
+public class UidServiceImpl implements UidService {
 
     @Autowired
     private UidGenerator defaultUidGenerator;
