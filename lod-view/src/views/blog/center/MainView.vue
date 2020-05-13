@@ -1,5 +1,42 @@
 <template>
   <div id="mainView">
+    <el-card class="hot-tab-card" style="margin-bottom: 20px">
+      <div class="edit_container">
+        <p>发个博客秀一下?</p>
+        <quill-editor
+          v-model="content"
+          ref="myQuillEditor"
+          :options="editorOption"
+          @focus="onEditorFocus($event)"
+          @blur="onEditorBlur($event)"
+          @change="onEditorChange($event)">
+        </quill-editor>
+      </div>
+      <div class="edit_toolbar">
+        <el-row type="flex" justify="space-between" align="middle">
+          <span>
+            <el-button type="text"><font-awesome-icon icon="smile"/> 表情</el-button>
+            <el-button type="text"><font-awesome-icon icon="image"/> 图片</el-button>
+            <el-button type="text"><font-awesome-icon icon="video"/> 视频</el-button>
+          </span>
+          <span>
+            <el-dropdown>
+              <el-button type="text" size="mini" style="margin-right: 15px">
+                <font-awesome-icon icon="globe-asia"/> 公开<i class="el-icon-arrow-down el-icon--right"></i>
+              </el-button>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item><font-awesome-icon icon="globe-asia"/> 公开</el-dropdown-item>
+                <el-dropdown-item><font-awesome-icon icon="grin-hearts"/> 粉丝</el-dropdown-item>
+                <el-dropdown-item><font-awesome-icon icon="user-friends"/> 好友圈</el-dropdown-item>
+                <el-dropdown-item><font-awesome-icon icon="user-lock"/> 仅自己</el-dropdown-item>
+                <el-dropdown-item divided><font-awesome-icon icon="user-tag"/> 指定群</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+            <el-button type="primary" size="mini">发布</el-button>
+          </span>
+        </el-row>
+      </div>
+    </el-card>
     <el-card v-for="o in 4" :key="o" class="hot-tab-card" style="margin-bottom: 20px">
       <div class="blog-header">
         <el-row type="flex" justify="space-between">
@@ -49,7 +86,37 @@
 
 <script>
 export default {
-  name: 'MainView'
+  name: 'MainView',
+  data () {
+    return {
+      editor: null,
+      content: '',
+      editorOption: {
+        modules: {
+          toolbar: null
+        },
+        theme: 'snow',
+        placeholder: '请输入正文'
+      }
+    }
+  },
+  mounted () {
+    this.editor = this.$refs.myQuillEditor.quill
+  },
+  beforeDestroy () {
+    this.editor = null
+    delete this.editor
+  },
+  methods: {
+    // 准备富文本编辑器
+    onEditorReady (editor) {},
+    // 富文本编辑器 失去焦点事件
+    onEditorBlur (editor) {},
+    // 富文本编辑器 获得焦点事件
+    onEditorFocus (editor) {},
+    // 富文本编辑器 内容改变事件
+    onEditorChange (editor) {}
+  }
 }
 </script>
 <style>
@@ -66,6 +133,11 @@ export default {
 
     .blog-header {
       /*padding-bottom: 10px;*/
+    }
+
+    .ql-editor {
+      padding: 5px 5px;
+      min-height: 80px;
     }
 
     .blog-content {
