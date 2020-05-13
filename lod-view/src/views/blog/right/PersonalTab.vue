@@ -3,7 +3,7 @@
       <el-card class="hot-tab-card">
         <div slot="header">
           <div class="user_head">
-            <div class="user_img" style="height: 50px;background-color: #409EFF;padding-top: 20px">
+            <div class="user_img" style="height: 50px;background-color: #2c3e50;padding-top: 20px">
               <img src="/img/avatar.278d09c7.jpg" alt="">
             </div>
           </div>
@@ -25,7 +25,11 @@ export default {
   name: 'PersonalTab'
 }
 </script>
-
+<style>
+  .el-button--text {
+    color: #606266;
+  }
+</style>
 <style lang="scss">
 #personalTab {
   .el-card__header {
@@ -35,7 +39,6 @@ export default {
   .el-card__header {
     padding: 0;
   }
-
   .user_img img {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;

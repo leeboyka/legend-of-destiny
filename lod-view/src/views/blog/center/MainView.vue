@@ -10,17 +10,11 @@
               2020-05-01 00:00
             </span>
           </el-row>
-          <el-popover
-            placement="bottom-end"
-            width="400"
-            trigger="click">
-            <span>
-              <el-row><el-button type="text" size="mini"><font-awesome-icon icon="eye-slash"/> 屏蔽此动态</el-button></el-row>
-              <el-row><el-button type="text" size="mini"><font-awesome-icon icon="edit"/> 重新编辑</el-button></el-row>
-              <el-row><el-button type="text" size="mini"><font-awesome-icon icon="trash"/> 删除</el-button></el-row>
-            </span>
-            <el-button type="text" slot="reference"><font-awesome-icon icon="ellipsis-v"></font-awesome-icon> </el-button>
-          </el-popover>
+          <el-row>
+            <el-button type="text" size="mini"><font-awesome-icon icon="eye-slash"/> 屏蔽</el-button>
+            <el-button type="text" size="mini"><font-awesome-icon icon="edit"/> 编辑</el-button>
+            <el-button type="text" size="mini"><font-awesome-icon icon="trash"/> 删除</el-button>
+          </el-row>
         </el-row>
       </div>
       <div class="blog-content">
@@ -49,7 +43,6 @@
         <div class="lovely-list">点赞列表</div>
         <div class="comment">评论列表</div>
       </div>
-
     </el-card>
   </div>
 </template>
@@ -60,10 +53,6 @@ export default {
 }
 </script>
 <style>
-  .el-popover {
-    width: 100px!important;
-    min-width: 50px;
-  }
   .el-popper[x-placement^=bottom] {
      margin-top: 0;
   }
