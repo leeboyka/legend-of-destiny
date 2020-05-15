@@ -31,7 +31,7 @@
         <li>动态</li>
         <li>收藏</li>
         <li>历史</li>
-        <li>创作中心</li>
+        <li><router-link to="/create">创作中心</router-link></li>
       </ul>
     </el-header>
   </div>

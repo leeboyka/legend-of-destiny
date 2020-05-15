@@ -96,7 +96,7 @@ export default {
           toolbar: null
         },
         theme: 'snow',
-        placeholder: '请输入正文'
+        placeholder: ''
       }
     }
   },
