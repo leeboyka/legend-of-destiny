@@ -1,7 +1,7 @@
 package com.destiny.lodbase.security.mapper;
 
-import com.destiny.lodbase.security.controller.Role;
-import com.destiny.lodbase.security.controller.User;
+import com.destiny.lodbase.security.pojo.Role;
+import com.destiny.lodbase.security.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

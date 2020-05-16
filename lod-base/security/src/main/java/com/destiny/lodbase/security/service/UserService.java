@@ -1,6 +1,6 @@
 package com.destiny.lodbase.security.service;
 
-import com.destiny.lodbase.security.controller.User;
+import com.destiny.lodbase.security.pojo.User;
 import com.destiny.lodbase.security.mapper.UserMapper;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

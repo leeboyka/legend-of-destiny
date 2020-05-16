@@ -1,5 +1,6 @@
-package com.destiny.lodbase.security.controller;
+package com.destiny.lodbase.security.pojo;
 
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -13,6 +14,7 @@ import java.util.List;
  * @author lee
  */
 @Data
+@Builder
 public class User implements UserDetails {
 
     private Integer userId;
