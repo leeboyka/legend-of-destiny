@@ -1,6 +1,8 @@
 package com.destiny.lodbase.common.util;
 
+import com.destiny.lodbase.common.error.BusinessException;
 import com.destiny.lodbase.common.pojo.SftpAuthority;
+import com.destiny.lodbase.common.response.Result;
 import com.destiny.lodbase.common.service.UidService;
 import com.jcraft.jsch.SftpException;
 import io.swagger.annotations.Api;
@@ -37,7 +39,7 @@ public class HomeViewController {
             @ApiImplicitParam(name = "code", value = "编号", dataType = "String", required = true, paramType = "query")
     })
     @RequestMapping(value = "/page", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
-    public Object halloWord(@RequestParam String code) {
+    public Result halloWord(@RequestParam String code) {
         List<Map<Long, String>> res = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             Map map = new HashMap();
@@ -45,8 +47,9 @@ public class HomeViewController {
             map.put(uid, uidService.parseUid(uid));
             res.add(map);
         }
-        return res;
+        return  Result.success().data(res);
     }
+
 
     @ApiOperation(value = "sftp", notes = "sftp测试")
     @ApiImplicitParams({
