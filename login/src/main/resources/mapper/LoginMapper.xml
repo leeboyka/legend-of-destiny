@@ -2,7 +2,6 @@
         <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.destiny.login.mapper.LoginMapper">
 <select id="login" parameterType="java.lang.String" resultType="java.lang.Integer">
-        select count (ElementNumber) from DataElement
-        where ElementCode = #{code}
+        select count(*) from sys_czry where rygh=#{code}
     </select>
 </mapper>

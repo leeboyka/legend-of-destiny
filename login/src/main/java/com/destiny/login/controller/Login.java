@@ -1,15 +1,14 @@
 package com.destiny.login.controller;
 
+import com.destiny.login.annotation.MyGetMapping;
+import com.destiny.login.annotation.MyInfo;
 import com.destiny.login.service.LoginService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -21,18 +20,17 @@ import javax.annotation.Resource;
  */
 @RestController
 @Slf4j
-@Api(value = "Login API", tags = "Login",description="登录")
+@Api(value = "Login API", tags = "Login")
 public class Login {
 
     @Resource
     private LoginService loginService;
 
+    @MyInfo
     @ApiOperation(value = "Login",notes = "登录")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "code",value = "编号",dataType = "String",required = true,paramType = "query")
-    })
-    @RequestMapping(value = "/login",method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
-    public int halloWord(@RequestParam String code){
+    @MyGetMapping("/login")
+    public Object halloWord(@RequestBody String code){
+        System.out.println("登录方法");
         return loginService.login(code);
     }
 }

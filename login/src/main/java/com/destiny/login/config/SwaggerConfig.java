@@ -1,11 +1,14 @@
 package com.destiny.login.config;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -24,11 +27,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
+@EnableKnife4j
+@Import(BeanValidatorPluginsConfiguration.class)
 public class SwaggerConfig implements WebMvcConfigurer {
-
-    @Value("${swagger.enable}")
-    private boolean enableSwagger;
-
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
@@ -40,42 +41,18 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .build();
     }
 
-
-    @Bean
-    public Docket createHnsApi() {
-
-        return new Docket(DocumentationType.SWAGGER_2)
-                .enable(enableSwagger)
+    @Bean(value = "defaultApi2")
+    public Docket defaultApi2() {
+        Docket docket=new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
+                //分组名称
+                .groupName("2.X版本")
                 .select()
+                //这里指定Controller扫描包路径
                 .apis(RequestHandlerSelectors.basePackage("com.destiny.login.controller"))
                 .paths(PathSelectors.any())
-                .build()
-                .groupName("Login");
-    }
-
-
-    /**
-     * swagger ui资源映射
-     *
-     * @param registry ViewControllerRegistry
-     */
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("swagger-ui.html")
-                .addResourceLocations("classpath:/META-INF/resources/");
-        registry.addResourceHandler("/webjars*")
-                .addResourceLocations("classpath:/META-INF/resources/webjars/");
-    }
-
-    /**
-     * swagger-ui.html路径映射，浏览器中使用/api-docs访问
-     *
-     * @param registry ViewControllerRegistry
-     */
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addRedirectViewController("/api-docs", "/swagger-ui.html");
+                .build();
+        return docket;
     }
 
 }
