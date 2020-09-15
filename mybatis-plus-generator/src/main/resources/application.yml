@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost;DatabaseName=PT_INS_20200414
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: sa
+    password: 1
+
+project:
+   config:
+     package-parent: com.leeboyka
+     author: leeboyka
+
+
+
